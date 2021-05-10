@@ -41,5 +41,6 @@ filebeat.config.modules:
 #----------------------------- Logstash output --------------------------------
 output.logstash:
   hosts: ["logstash131:70xx"]
-# 不同机器的日志发往的端口不同，我这里用了三台机器，每个机器开了10多个beat端口。
+# 不同机器的日志发往不同的IP端口
+# 我这里用了三台logstash，每个logstash处理一个机房的机器s，每个机器发往不同的logstash beat端口。
 
