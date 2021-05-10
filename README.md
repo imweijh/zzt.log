@@ -2,7 +2,7 @@
 
 ELK 7.x
 
-filebeat处理多行日志，发给logstash
+filebeat处理多行日志（中焯多行日志会超过5000行，故 multiline.max_lines: 5000），发给logstash
 
 中焯事务处理机日志，需要从请求应答日志的时间戳自己计算耗时。
 
