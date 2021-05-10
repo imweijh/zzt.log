@@ -13,3 +13,6 @@ bin/logstash-plugin install logstash-filter-elapsed
 
 借助logstash pipelines.yml可以很好解决此问题。
 
+用了三台机器，除部署elasticsearch集群，每台都安装logstash，开多个pipelines，每个pipeline一个worker处理一台中焯日志。
+
+
