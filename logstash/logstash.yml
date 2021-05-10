@@ -1,0 +1,5 @@
+path.data: /var/lib/logstash
+pipeline.batch.size: 300
+pipeline.ordered: true
+config.reload.automatic: false
+path.logs: /var/log/logstash
