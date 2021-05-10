@@ -1,0 +1,45 @@
+#filebeat version 7.x
+
+filebeat.inputs:
+
+- type: log
+  enabled: true
+  encoding: gbk
+  paths:
+    - D:\zzinfo\jyserver\module\log\*.tzt
+  exclude_lines: ['^[0-9]{2}:[0-9]{2}:[0-9]{2}$']
+  tags: ["fenggang"]
+  fields_under_root: true
+  fields:
+    zzttype: jzjy
+
+  multiline.pattern: "^[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}:"
+  multiline.negate: true
+  multiline.match: after
+  multiline.max_lines: 5000
+
+- type: log
+  enabled: true
+  encoding: gbk
+  paths:
+    - D:\zzinfo\rzrqserver\module\log\*.tzt
+  exclude_lines: ['^[0-9]{2}:[0-9]{2}:[0-9]{2}$']
+  tags: ["fenggang"]
+  fields_under_root: true
+  fields:
+    zzttype: rzrq
+
+  multiline.pattern: "^[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}:"
+  multiline.negate: true
+  multiline.match: after
+  multiline.max_lines: 5000
+  
+#============================= Filebeat modules ===============================
+filebeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: false
+
+#----------------------------- Logstash output --------------------------------
+output.logstash:
+  hosts: ["logstash131:7007"]
+
