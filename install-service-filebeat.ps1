@@ -1,5 +1,5 @@
 # set-executionpolicy remotesigned
-# 如果安装报错，可能要先执行上面的powershell命令
+# 如果filebeat服务安装报错，可能要先执行上面的powershell命令
 
 # Delete and stop the service if it already exists.
 if (Get-Service filebeat -ErrorAction SilentlyContinue) {
