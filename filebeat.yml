@@ -1,5 +1,4 @@
 #filebeat version 7.x
-
 filebeat.inputs:
 
 - type: log
@@ -41,5 +40,6 @@ filebeat.config.modules:
 
 #----------------------------- Logstash output --------------------------------
 output.logstash:
-  hosts: ["logstash131:7007"]
+  hosts: ["logstash131:70xx"]
+# 不同机器的日志发往的端口不同，我这里用了三台机器，每个机器开了10多个beat端口。
 
