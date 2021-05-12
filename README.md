@@ -21,6 +21,8 @@ bin/logstash-plugin install logstash-filter-elapsed
 
 ![image](https://user-images.githubusercontent.com/23710675/117610646-abc4a700-b194-11eb-9309-3cb3e964faa2.png)
 
-ELK、Elastic Stack、logstash 等是 Elasticsearch BV.公司商标
+
+Elastic Stack、logstash、elasticsearch、kibana、filebeat 等是 Elasticsearch BV.公司商标
+
 https://www.elastic.co/legal/trademarks
 
